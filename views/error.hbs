@@ -1,3 +1,11 @@
-<h1>{{message}}</h1>
-<h2>{{error.status}}</h2>
-<pre>{{error.stack}}</pre>
+<link rel="stylesheet" href="/stylesheets/error.css">
+<section class="error-container">
+	<span><span>4</span></span>
+	<span>0</span>
+	<span><span>4</span></span>
+    {{#ifCond message '==' 'Not Found'}}
+    <br>
+    No Encontrado
+    {{/ifCond}}
+</section>
+<a class="mx-auto" href="/">Volver al inicio</a>

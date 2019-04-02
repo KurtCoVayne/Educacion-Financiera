@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "dev": "nodemon ./bin/ww"
+    "dev": "nodemon ./bin/ww",
+    "debugging": "SET DEBUG=Trigo:* & npm run dev"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -20,5 +21,8 @@
     "morgan": "~1.9.0",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0"
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.8.1"
   }
 }

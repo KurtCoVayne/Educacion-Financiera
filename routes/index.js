@@ -3,8 +3,10 @@ var router = express.Router();
 const {isAuthenticated} = require('../helpers/val')
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index');
+router.get('/', function(req, res) {
+  const user = req.user;
+  console.log(user)
+  res.render('index', {user});
 });
 router.get('/problematica', (req, res ) =>{
   res.render('problematica');
@@ -20,6 +22,6 @@ router.get('/conceptos', (req, res) => {
 });
 router.get('/simulador',isAuthenticated ,(req, res) =>{
   res.render('simulador_form')
-})
+});
 
 module.exports = router;
