@@ -1,0 +1,24 @@
+<div class="row">
+    <div class="col-md-4 mx-auto">
+        <div class="card mt-4 text-center">
+            <div class="card-header">
+                <h1>Ingresar a tu cuenta</h1>
+            </div>
+            <img src="/img/logo.png" class="img-fluid img-thumbnail mx-auto d-block m-4 max-width:10%" alt="Logo">
+            <div class="card-body">
+                <form action="/users/ingresar" method="POST" autocomplete="off">
+                <div class="form-group">
+                    <input type="email" class="form-control" name="email" placeholder="Correo" autofocus required>
+                    <div class="form-group">
+                        <input type="password" class="form-control mt-4" name="password" placeholder="Contraseña" required>
+                        <button type="submit" class="btn btn-primary btn-block mt-4"> 
+                            Ingresar 
+                        </button>
+                        </form>
+                    </div>
+                    <strong><a href="/users/registro" class="text-info">Todavia no te has registrado? Si es así da click aquí</a></strong>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

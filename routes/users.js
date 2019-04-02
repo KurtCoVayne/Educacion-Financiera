@@ -1,12 +1,25 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
+const userCtrl = require('../controllers/user.ctrl');
+const passport = require('passport')
 
 /* GET users listing. */
-router.get('/ingresar', function(req, res, next) {
-  res.send('respond with a resource');
+router.get('/!ingresar', function(req, res, next) {
+  res.render('users/ingresar');
+
 });
+router.get('/ingresar', (req, res)=> {
+  res.render('users/ingresar');
+  req.flash('error_msg');
+});
+router.post('/ingresar', passport.authenticate('local', {
+  successRedirect: '/',
+  failureRedirect: '/users/ingresar',
+  failureFlash: true
+}));
 router.get('/registro', function(req, res, next) {
-  res.send('respond with a resource');
+  res.render('users/registrar');
 });
+router.post('/registro', userCtrl.signup)
 
 module.exports = router;

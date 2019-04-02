@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+const {isAuthenticated} = require('../helpers/val')
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -17,5 +18,8 @@ router.get('/ejemplos', (req, res) => {
 router.get('/conceptos', (req, res) => {
   res.render('solucion');
 });
+router.get('/simulador',isAuthenticated ,(req, res) =>{
+  res.render('simulador_form')
+})
 
 module.exports = router;
