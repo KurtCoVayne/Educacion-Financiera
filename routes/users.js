@@ -20,6 +20,10 @@ router.post('/ingresar', passport.authenticate('local', {
 router.get('/registro', function(req, res, next) {
   res.render('users/registrar');
 });
-router.post('/registro', userCtrl.signup)
+router.get('/logout', (req, res) =>{
+  req.logOut()
+  res.redirect('/')
+});
+router.post('/registro', userCtrl.signup);
 
 module.exports = router;

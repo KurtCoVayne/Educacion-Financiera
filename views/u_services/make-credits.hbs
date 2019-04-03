@@ -1,0 +1,66 @@
+<script src="/javascripts/buttons.js"></script>
+<div class="row">
+    <div class="col-md-6">
+        <div class="container float-left">
+            <div class="card">
+                <div class="card-header">
+                    <div class="row">
+                        <div class="col-md-10">
+                            <h4>Información de tu cuenta </h4>
+                        </div>
+                        <div class="col-md-2">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+
+                    <h6>ID:</h6>{{user.id}}
+                    <h6>Nombre:</h6>{{user.name}}
+                    <h6>Correo:</h6>{{user.email}}
+                    <h6>Balance:</h6>{{user.balance}}
+                    <h6>Deuda:</h6>{{user.debt}}
+                    <hr>
+                    <h6>Fecha de creación:</h6>{{user.date}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mx-auto">
+        <div class="card mt-4 text-center">
+            <div class="card-header">
+                <h1>Solicitar creditos</h1>
+            </div>
+            <div class="card-body">
+                <form action="/simulador" method="POST" autocomplete="off">
+                <em class="text-muted">*El monto está en dolares
+                </em>
+                <br>
+                <em class="text-muted">
+                    *El interes se calcula con el 5% del valor del monto
+                </em>
+                    <h6>Monto del prestamo</h6>
+                    <div class="btn-group mb-2 form-group justify-content-center" id="amount-container">
+                        <input type="button" class="btn btn-info amount mr-2 btn-md" name="amount"  value="5000">
+                        <input type="button" class="btn btn-info amount mr-2 btn-md" name="amount"  value="10000">
+                        <input type="button" class="btn btn-info amount btn-md" name="amount" value="15000">
+                    </div>
+                    <h6>Cantidad de Cuotas</h6>
+                    <div class="btn-group form-group" id="dues-container">
+                        <input type="button" class="btn btn-info dues mr-2" name="dues" value="5">
+                        <input type="button" class="btn btn-info dues mr-2" name="dues"  value="10">
+                        <input type="button" class="btn btn-info dues" name="dues"  value="20">
+                    </div>
+                    <div class="form-group" id="form-group">
+                        <input type="number" name="income" class="form-control mb-4">
+                        <input type="password" class="form-control mt-4" name="password" placeholder="Contraseña"
+                            required>
+                        <button type="submit" id="btn-cd" class="btn btn-primary btn-block mt-4 btn-cd">
+                            Aceptar
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
