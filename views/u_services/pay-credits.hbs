@@ -33,12 +33,12 @@
                 <div class="card-body justify content-between p-4">
                     <form action="/pagar" method="POST">
                         <input type="hidden" name="debtId" value="{{debt._id}}">
-                        <input type="hidden" name="payValue" value="{{math debt.amount '/' debt.dues}}">
-                        <input type="hidden" name="debtAmount" value="{{debt.amount}}">
+                        <input type="hidden" name="payValue" value="{{math debt.totalAmount '/' debt.dues}}">
+                        <input type="hidden" name="debtAmount" value="{{debt.totalAmount}}">
                         <input type="hidden" name="actualPayed" value="{{debt.payedAmount}}">
                         <input type="hidden" name="debtDues" value="{{debt.dues}}">
                         <input type="hidden" name="debtDate" value="{{debt.date}}">
-                        <h4>Deseas pagar 1 cuota por {{math debt.amount '/' debt.dues}}?</h4>
+                        <h4>Deseas pagar 1 cuota por {{math debt.totalAmount '/' debt.dues}}?</h4>
                         <button type="submit" class="btn btn-primary btn-block mt-4 mb-4">Aceptar</button>
                     </form>
                     <blockquote class="blockquote">La propiedad de cantidad pagada se le añadira
