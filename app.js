@@ -10,7 +10,7 @@ const flash = require('connect-flash');
 const exphbs = require('express-handlebars')
 
 const app = express();
-require('./database');
+
 require('./config/passport');
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
