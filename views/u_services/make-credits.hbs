@@ -33,12 +33,6 @@
             </div>
             <div class="card-body">
                 <form action="/simulador" method="POST" autocomplete="off">
-                <em class="text-muted">*El monto está en dolares
-                </em>
-                <br>
-                <em class="text-muted">
-                    *El interes se calcula con el 5% del valor del monto
-                </em>
                     <h6>Monto del prestamo</h6>
                     <div class="btn-group mb-2 form-group justify-content-center" id="amount-container">
                         <input type="button" class="btn btn-info amount mr-2 btn-md" name="amount"  value="5000">
@@ -47,12 +41,13 @@
                     </div>
                     <h6>Cantidad de Cuotas</h6>
                     <div class="btn-group form-group" id="dues-container">
-                        <input type="button" class="btn btn-info dues mr-2" name="dues" value="5">
-                        <input type="button" class="btn btn-info dues mr-2" name="dues"  value="10">
-                        <input type="button" class="btn btn-info dues" name="dues"  value="20">
+                        <input type="button" class="btn btn-info dues mr-2" name="dues" value="12">
+                        <input type="button" class="btn btn-info dues mr-2" name="dues"  value="24">
+                        <input type="button" class="btn btn-info dues" name="dues"  value="36">
                     </div>
                     <div class="form-group" id="form-group">
-                        <input type="number" name="income" class="form-control mb-4">
+                        <h6>Ingresos mensuales</h6>
+                        <input type="number" name="income" class="form-control mb-4" placeholder="Ingresos en dolares">
                         <input type="password" class="form-control mt-4" name="password" placeholder="Contraseña"
                             required>
                         <button type="submit" id="btn-cd" class="btn btn-primary btn-block mt-4 btn-cd">
@@ -60,6 +55,12 @@
                         </button>
                     </div>
                 </form>
+                <em class="text-muted">*El monto está en dolares
+                </em>
+                <br>
+                <em class="text-muted">
+                    *El interes se calcula con el 5% del valor del monto
+                </em>
             </div>
         </div>
     </div>

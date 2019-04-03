@@ -45,9 +45,9 @@ $(document).ready(function () {
         $('#backD').click(function (e) {
             let container = $('#dues-container')
             container.empty()
-            container.append(`<input type="button" class="btn btn-info dues mr-2" name="dues" value="5">`)
-            container.append(`<input type="button" class="btn btn-info dues mr-2" name="dues"  value="10">`)
-            container.append(`<input type="button" class="btn btn-info dues" name="dues"  value="20">`)
+            container.append(`<input type="button" class="btn btn-info dues mr-2" name="dues" value="12">`)
+            container.append(`<input type="button" class="btn btn-info dues mr-2" name="dues"  value="24">`)
+            container.append(`<input type="button" class="btn btn-info dues" name="dues"  value="36">`)
             $('#duesValue').remove()
             listenCreditOptions()
         })
