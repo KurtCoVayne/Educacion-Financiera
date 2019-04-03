@@ -1,0 +1,55 @@
+<div class="row">
+    {{#if debt}}
+    <div class="col-md-6">
+        <div class="container float-left">
+            <div class="card">
+                <div class="card-header">
+                    <div class="row">
+                        <div class="col-md-10">
+                            <h4>Información de tus deudas </h4>
+                        </div>
+                        <div class="col-md-2">
+                            <i class="fas fa-hand-holding-usd"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body mb-4">
+                    <h6>Monto Deuda</h6>{{debt.amount}}
+                    <h6>Cuotas</h6>{{debt.dues}}
+                    <h6>Cantidad pagada</h6>{{debt.payedAmount}}
+                    <h6>Cantidad faltante</h6>{{math debt.amount '-' debt.payedAmount}}
+                    <hr>
+                    <h6>Fecha de creación:</h6>{{debt.date}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="container float-left">
+            <div class="card ">
+                <div class="card-header">
+                    <h4>Pagar tu deuda</h4>
+                </div>
+                <div class="card-body justify content-between p-4">
+                    <form action="/pagar" method="POST">
+                        <input type="hidden" name="debtId" value="{{debt._id}}">
+                        <input type="hidden" name="payValue" value="{{math debt.amount '/' debt.dues}}">
+                        <input type="hidden" name="debtAmount" value="{{debt.amount}}">
+                        <input type="hidden" name="actualPayed" value="{{debt.payedAmount}}">
+                        <input type="hidden" name="debtDues" value="{{debt.dues}}">
+                        <input type="hidden" name="debtDate" value="{{debt.date}}">
+                        <h4>Deseas pagar 1 cuota por {{math debt.amount '/' debt.dues}}?</h4>
+                        <button type="submit" class="btn btn-primary btn-block mt-4 mb-4">Aceptar</button>
+                    </form>
+                    <blockquote class="blockquote">La propiedad de cantidad pagada se le añadira
+                        {{math debt.amount '/' debt.dues}}. <br> Cuando este valor (cantidad pagada) llegue al mismo
+                        valor que el monto de la deuda esta se considerara como pagada. <br>
+                        Cuando esto ocurra se eliminaran las propiedades de tu deuda actual.</blockquote>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{else}}
+    <h2>No tienes ninguna deuda</h2>
+    {{/if}}
+</div>
