@@ -1,7 +1,7 @@
 # Educación Financiera.
 Aplicación Web con el objetivo de enseñar a la gente conceptos básicos de Inversión y prestamo
 
-
+Resultado final del proyecto: https://educacion-financiera.herokuapp.com/
 
 ## Construido con:
 
@@ -15,6 +15,8 @@ Aplicación Web con el objetivo de enseñar a la gente conceptos básicos de Inv
 
 ### Versiones disponibles.
 
+Todo el sistema de versiones está hecho(semanticamente) bajo mi criterio de que es una versión y que no. Para las versiones disponibles Versiones del repositorio.
+* **Detalles de la última versión(1.0.0)** - *Primera versión del proyecto*
 
 ## Autores:
 * **John Alejandro Gonzalez** - *Trabajo completo* - [LinkedIn](https://www.linkedin.com/in/j84486b177/)
@@ -38,3 +40,4 @@ QUE SURJA DE O EN CONEXIÓN CON EL USO O RENDIMIENTO DE ESTE SOFTWARE.
 
 ## Agradecimientos.
 
+Este trabajo se realizó con la intención de enseñarle a la gente  de una forma practica y sencilla como manejar sus finanzas personales o hasta empresariales, ya sea cualquier razón por la cual se realiza el préstamo, desde viajar, hasta crear una empresa, todo es valido cuando la inversión sea para crecer, tú como persona, o tu empresa financieramente.
