@@ -6,7 +6,7 @@ const DebtSchema = new Schema({
     dues: { type: Number },
     payedAmount: { type: Number, default: 0 },
     interest: {type: Number, default: 0.05, max: 0.7, min: 0.01},
-    totalAmount: { type: Number, default: this.amount + this.amount * this.interest},
+    totalAmount: { type: Number },
     date: { type: Date, default: Date.now }
 })
 

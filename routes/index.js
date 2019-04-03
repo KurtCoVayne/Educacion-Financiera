@@ -23,7 +23,18 @@ router.get('/conceptos', (req, res) => {
   res.render('conceptos');
 });
 router.get('/simulador',isAuthenticated ,(req, res) =>{
-  res.render('u_services/make-credits')
+  let hora;
+  const fecha = new Date();
+  console.log(fecha.getHours())
+  if(fecha.getHours() < 12){
+    hora = 'Buenos días'
+  } else if(fecha.getHours > 18) {
+    hora = 'Buenas noches'
+  } else {
+    hora = 'Buenas tardes'
+  }
+  console.log(hora)
+  res.render('u_services/make-credits', {hora})
 });
 router.post('/simulador', async (req, res) => {
   //  I = c * intereses * cuotas
@@ -52,7 +63,8 @@ router.post('/simulador', async (req, res) => {
             await new Debt({
                 userId: req.user.id,
                 amount,
-                dues
+                dues,
+                totalAmount : parseInt(amount) + parseInt(amount * 0.05)  
             }).save()
             await User.findByIdAndUpdate(req.user.id, { $set: { debt: amount, balance: req.user.balance + parseInt(amount) } })
             req.flash('success_msg', 'Se creo una nueva deuda a tu nombre')

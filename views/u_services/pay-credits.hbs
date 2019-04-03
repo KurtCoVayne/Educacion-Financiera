@@ -14,10 +14,10 @@
                     </div>
                 </div>
                 <div class="card-body mb-4">
-                    <h6>Monto Deuda</h6>{{debt.amount}}
+                    <h6>Monto Deuda</h6>{{debt.totalAmount}}
                     <h6>Cuotas</h6>{{debt.dues}}
                     <h6>Cantidad pagada</h6>{{debt.payedAmount}}
-                    <h6>Cantidad faltante</h6>{{math debt.amount '-' debt.payedAmount}}
+                    <h6>Cantidad faltante</h6>{{math debt.totalAmount '-' debt.payedAmount}}
                     <hr>
                     <h6>Fecha de creación:</h6>{{debt.date}}
                 </div>
@@ -42,7 +42,7 @@
                         <button type="submit" class="btn btn-primary btn-block mt-4 mb-4">Aceptar</button>
                     </form>
                     {{!-- <blockquote class="blockquote">La propiedad de cantidad pagada se le añadira
-                        {{math debt.amount '/' debt.dues}}. <br> Cuando este valor (cantidad pagada) llegue al mismo
+                        {{math debt.totalAmount '/' debt.dues}}. <br> Cuando este valor (cantidad pagada) llegue al mismo
                         valor que el monto de la deuda esta se considerara como pagada. <br>
                         Cuando esto ocurra se eliminaran las propiedades de tu deuda actual.</blockquote> --}}
                 </div>
