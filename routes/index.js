@@ -23,20 +23,17 @@ router.get('/conceptos', (req, res) => {
   res.render('conceptos');
 });
 router.get('/simulador',isAuthenticated ,(req, res) =>{
-<<<<<<< HEAD
-  res.render('simulador_form')
-});
-=======
   res.render('u_services/make-credits')
 });
 router.post('/simulador', async (req, res) => {
   //  I = c * intereses * cuotas
+  const errors = [];
   const { amount, dues, password, income } = req.body;
   if((income * dues)/2 < amount <  amount){
     errors.push({text: 'No es posible hacer tu prestamo, debido a que tus ingresos son muy bajos'})
     return res.render('u_services/make-credits', {errors})
   }
-    const errors = [];
+    
 
     if (await bcrypt.compare(password, req.user.password)) {
         let existingDebt = await Debt.findOne({ userId: req.user.id })
@@ -95,6 +92,5 @@ router.post('/pagar', async (req, res) => {
     req.flash('success_msg', 'Se añadieron ' + payValue + '$ a tu deuda de ' + debtAmount)
     res.render('u_services/pay-credits', { debt })
 })
->>>>>>> 7e71c290e27cf8399e8141186b7ed2f4f47bf1ef
 
 module.exports = router;

@@ -47,7 +47,7 @@ app.use((req, res, next) =>{
 })
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
+app.use('/favicon.ico', express.static('img/favicon.ico'));
 
 //ROUTING
 const indexRouter = require('./routes/index');
