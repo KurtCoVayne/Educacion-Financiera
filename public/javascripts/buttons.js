@@ -17,7 +17,7 @@ $(document).ready(function () {
             container.append(`<button type="button" class="btn btn-warning btn-sm ml-2" id="backA"><i class="fas fa-arrow-left"></i></button>`)
             listenBackOption()
             $('#amountValue').remove()
-            form.append(`<input type="hidden" name="amount" value="${parseInt(this.value) + this.value*0.05}" id="amountValue">`)
+            form.append(`<input type="hidden" name="amount" value="${this.value}" id="amountValue">`)
             // console.log(this.value, container)
         })
         $('.dues').click(function (e) {
@@ -29,6 +29,12 @@ $(document).ready(function () {
             listenBackOption()
             $('#duesValue').remove()
             form.append(`<input type="hidden" name="dues" value="${this.value}" id="duesValue">`)
+            if(this.value > 12){
+                form.append(`<input type="hidden" name="int" value="0.07" id="duesValue">`)
+            }
+            if(this.value > 24){
+                form.append(`<input type="hidden" name="int" value="0.09" id="duesValue">`)
+            }
             // console.log(this.value, container)
         })
     }
@@ -66,9 +72,9 @@ $(document).ready(function () {
         }
         let amount = parseInt($('.amount').val())
         let interes = parseInt(amount * 0.05)
-        amount += interes
         let dues = $('.dues').val()
-        const div = amount / dues
+        const div = parseFloat((amount+intereses)) / dues
+        console.log(div)
         const result = window.confirm('Estás a punto de solicitar el siguiente credito' +
             '\nMonto de la deuda: ' + amount +
             '\nCantidad de cuotas: ' + dues +
