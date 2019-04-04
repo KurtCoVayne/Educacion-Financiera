@@ -41,6 +41,7 @@
                         <h4>Deseas pagar 1 cuota por {{math debt.totalAmount '/' debt.dues}}?</h4>
                         <button type="submit" class="btn btn-primary btn-block mt-4 mb-4">Aceptar</button>
                     </form>
+                    <a href="/table">Información de la deuda</a>
                     {{!-- <blockquote class="blockquote">La propiedad de cantidad pagada se le añadira
                         {{math debt.totalAmount '/' debt.dues}}. <br> Cuando este valor (cantidad pagada) llegue al mismo
                         valor que el monto de la deuda esta se considerara como pagada. <br>
@@ -50,6 +51,10 @@
         </div>
     </div>
     {{else}}
-    <h2>No tienes ninguna deuda</h2>
+    <div class="row mx-auto p-8">
+        <div class="col-md-12 mt-8">
+    <h1>No tienes ninguna deuda</h1>
+    </div>
+    </div>
     {{/if}}
 </div>
