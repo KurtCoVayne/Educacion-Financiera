@@ -91,5 +91,8 @@ router.post('/pagar', async (req, res) => {
     req.flash('success_msg', 'Se añadieron ' + payValue + '$ a tu deuda de ' + debtAmount)
     res.render('u_services/pay-credits', { debt })
 })
-
+router.get('/table', isAuthenticated,async (req, res) => {
+  const debt  = await Debt.findOne({ userId: req.user.id })
+  
+})
 module.exports = router;
