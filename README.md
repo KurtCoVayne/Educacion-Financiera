@@ -23,7 +23,7 @@ Todo el sistema de versiones está hecho(semanticamente) bajo mi criterio de que
 ## Licencia
 Este proyecto está bajo la licensia ISC para su uso o copia, ya que es un proyecto con fin educativo, y libre. Todo siempre y cuando cuando se asuman los creditos al autor como dice lo siguiente.
 
-Copyright (c) 2019, Institución Educativa Concejo de Medellin, John Alejandro Gonzalez [Contacto](johnalejandrog.g4@gmail.com).
+##### Copyright (c) 2019, Institución Educativa Concejo de Medellin, John Alejandro Gonzalez [Contacto](johnalejandrog.g4@gmail.com).
 
 Se concede por la presente el permiso para usar, copiar, modificar y/o 
 distribuir este software para cualquier propósito con o sin cargo, 

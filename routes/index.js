@@ -7,7 +7,6 @@ const User = require('../models/User')
 /* GET home page. */
 router.get('/', function(req, res) {
   const user = req.user;
-  console.log(user)
   res.render('index', {user});
 });
 router.get('/problematica', (req, res ) =>{
