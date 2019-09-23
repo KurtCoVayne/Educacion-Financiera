@@ -32,7 +32,7 @@ $(document).ready(function () {
             if(this.value > 12){
                 form.append(`<input type="hidden" name="int" value="0.07" id="duesValue">`)
             }
-            if(this.value > 24){
+            else if(this.value > 24){
                 form.append(`<input type="hidden" name="int" value="0.09" id="duesValue">`)
             }
             // console.log(this.value, container)

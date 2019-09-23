@@ -42,6 +42,6 @@ QUE SURJA DE O EN CONEXIÓN CON EL USO O RENDIMIENTO DE ESTE SOFTWARE.
 
 Este trabajo se realizó con la intención de enseñarle a la gente  de una forma practica y sencilla como manejar sus finanzas personales o hasta empresariales, ya sea cualquier razón por la cual se realiza el préstamo, desde viajar, hasta crear una empresa, todo es valido cuando la inversión sea para crecer, tú como persona, o tu empresa financieramente.
 
-#####DISCLAIMER
+###### DISCLAIMER
 
 *Algunas imagenes fueron sacadas de internet como uso publico, si se hace mal uso de alguna de éstas contactar con el creador*
